@@ -20,6 +20,7 @@ export const container = style({
   display: 'flex',
   flexDirection: 'column',
   gap: 15,
+  boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
 });
 
 export const authHeader = style({

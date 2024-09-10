@@ -7,6 +7,7 @@ import {
   authLabel,
 } from './signup-signin.css';
 import { ChangeEvent, useState } from 'react';
+import Button from '../../components/common/Button';
 
 export default function Signin() {
   const [signinData, setSigninData] = useState({
@@ -52,7 +53,7 @@ export default function Signin() {
             placeholder="비밀번호를 입력해 주세요."
           />
         </div>
-        <button>로그인</button>
+        <Button height={50}>로그인</Button>
       </div>
     </div>
   );
