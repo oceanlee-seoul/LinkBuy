@@ -3,8 +3,8 @@ import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.tsx';
 import './index.css';
-import Signin from './pages/signin.tsx';
-import Signup from './pages/signup.tsx';
+import Signin from './pages/signup-signin/signin.tsx';
+import Signup from './pages/signup-signin/signup.tsx';
 
 const router = createBrowserRouter([
   {
