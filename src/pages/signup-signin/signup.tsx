@@ -10,11 +10,8 @@ import {
 import { ChangeEvent, useState, useEffect } from 'react';
 import Button from '../../components/common/Button';
 import { postSignup } from '../../apis/userApis';
-import { useUserStore } from '../../store/useUserStore';
 
 export default function Signup() {
-  const setUser = useUserStore((state) => state.setUser);
-
   const [signupData, setSignupData] = useState({
     email: '',
     nickname: '',
@@ -69,18 +66,6 @@ export default function Signup() {
     try {
       const data = await postSignup(signupData);
       console.log(data);
-      setUser({
-        accessToken: data.accessToken,
-        refreshToken: data.refreshToken,
-        user: {
-          createdAt: data.user.createdAt,
-          email: data.user.email,
-          id: data.user.id,
-          image: data.user.image,
-          nickname: data.user.nickname,
-          updatedAt: data.user.updatedAt,
-        },
-      });
     } catch (error) {
       console.error(error);
     }

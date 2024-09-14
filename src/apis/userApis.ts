@@ -1,6 +1,6 @@
 import instance from './axios';
 
-interface SignupResponse {
+interface SignupAndSigninResponse {
   accessToken: string;
   refreshToken: string;
   user: {
@@ -18,9 +18,20 @@ export const postSignup = async (formData: {
   nickname: string;
   password: string;
   passwordConfirmation: string;
-}): Promise<SignupResponse> => {
-  const response = await instance.post<SignupResponse>(
+}): Promise<SignupAndSigninResponse> => {
+  const response = await instance.post<SignupAndSigninResponse>(
     `/auth/signUp`,
+    formData
+  );
+  return response.data;
+};
+
+export const postSignin = async (formData: {
+  email: string;
+  password: string;
+}): Promise<SignupAndSigninResponse> => {
+  const response = await instance.post<SignupAndSigninResponse>(
+    `auth/signIn`,
     formData
   );
   return response.data;
