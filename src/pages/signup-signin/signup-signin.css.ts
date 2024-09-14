@@ -47,3 +47,8 @@ export const authInput = style({
     '&:focus': { borderColor: vars.colors.brandPrimary },
   },
 });
+
+export const errorMessage = style({
+  fontSize: 12,
+  color: '#FF4D4D',
+});

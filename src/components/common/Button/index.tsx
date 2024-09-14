@@ -11,7 +11,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export default function Button(props: ButtonProps) {
   const {
     children,
-    disabled,
+    disabled = false,
     variant = 'primary',
     width = '100%',
     height = '100%',
@@ -20,7 +20,9 @@ export default function Button(props: ButtonProps) {
 
   return (
     <button
-      className={`${buttonBaseStyle} ${buttonVariants[variant]}`}
+      className={`${buttonBaseStyle} ${
+        disabled ? buttonVariants['disabled'] : buttonVariants[variant]
+      }`}
       disabled={disabled}
       {...buttonProps}
       style={{ width, height }}

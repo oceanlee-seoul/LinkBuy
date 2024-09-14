@@ -21,4 +21,8 @@ export const buttonVariants = styleVariants({
     backgroundColor: '#FF4D4D',
     color: '#FFFFFF',
   },
+  disabled: {
+    backgroundColor: '#eee',
+    pointerEvents: 'none',
+  },
 });
