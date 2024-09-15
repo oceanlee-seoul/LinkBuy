@@ -6,3 +6,9 @@ export const vars = createGlobalTheme(':root', {
     PrimaryButtonHover: '#0dd0db',
   },
 });
+
+export const breakpoints = {
+  mobile: 'screen and (min-width: 480px)',
+  tablet: 'screen and (min-width: 768px)',
+  desktop: 'screen and (min-width: 1280px)',
+};
