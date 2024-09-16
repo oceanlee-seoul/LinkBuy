@@ -8,6 +8,7 @@ import {
   NavWrapper,
   NavItem,
 } from './Header.css';
+import Profile from '../common/Profile';
 
 export default function Header() {
   return (
@@ -28,7 +29,9 @@ export default function Header() {
             중고마켓
           </Link>
         </nav>
-        <div>profile</div>
+        <div>
+          <Profile />
+        </div>
       </div>
     </div>
   );
