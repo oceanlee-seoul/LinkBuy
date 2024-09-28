@@ -15,10 +15,7 @@ export default function Header() {
     <div className={HeaderWrapper}>
       <div className={HeaderContainer}>
         <div className={LogoWrapper}>
-          <img
-            className={HeaderLogo}
-            src="../../../public/assets/images/logo.png"
-          />
+          <img className={HeaderLogo} src="/assets/images/logo.png" />
           <p className={LogoTitle}>LinkBy</p>
         </div>
         <nav className={NavWrapper}>

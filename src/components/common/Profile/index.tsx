@@ -13,7 +13,7 @@ export default function Profile({
         <img
           className={ProfileStyle}
           style={{ color: 'black' }}
-          src="../../../../public/assets/icons/icon_profile.svg"
+          src="/assets/icons/icon_profile.svg"
         />
       )}
     </div>
